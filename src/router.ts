@@ -10,6 +10,8 @@ import { listOrders } from './app/useCases/orders/listOrders';
 import { createOrder } from './app/useCases/orders/createOrder';
 import { changeOrderStatus } from './app/useCases/orders/changeOrderStatus';
 import { cancelOrder } from './app/useCases/orders/cancelOrder';
+import { listTable } from './app/useCases/tables/listTables';
+import { createTable } from './app/useCases/tables/createTable';
 
 export const router = Router();
 
@@ -29,6 +31,12 @@ router.get('/categories', listCategories)
 
 // create category
 router.post('/categories', createCategory)
+
+// list categories
+router.get('/tables', listTable)
+
+// create category
+router.post('/tables', createTable)
 
 // list products
 router.get('/products', listProducts)

@@ -1,9 +1,11 @@
 import { model, Schema } from 'mongoose';
+import { Table } from './Table';
 
 export const Order = model('Order', new Schema({
     table: {
-        type: String,
-        required: true
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'Table'
     },
     status: {
         type: String,
